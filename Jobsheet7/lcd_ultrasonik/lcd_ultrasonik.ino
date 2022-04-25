@@ -1,6 +1,6 @@
 #include <LiquidCrystal_I2C.h>
-#define trigger_pin 12 //6
-#define Echo_pin 14 //5
+#define trigger_pin D5 //6
+#define Echo_pin D6 //5
 //#define LED 2
 
 LiquidCrystal_I2C lcd (0x27, 16,2);  //pengenalan alamat i2c
@@ -35,14 +35,13 @@ void  loop () {
   lcd. setCursor (0, 1);
   lcd.print("Jarak: ");
   lcd.print(distance);
-  lcd.print(" cm");
-
+  lcd.println(" cm ");
   
   Serial.print("Jarak: ");
   Serial.print(distance);
   Serial.println(" cm");
 
-  delay(3000);
+  delay(1000);
 
   
 }

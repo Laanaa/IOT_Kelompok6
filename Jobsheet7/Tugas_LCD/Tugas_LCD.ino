@@ -100,12 +100,12 @@ void loop() {
   float t = dht.readTemperature();
   float f = dht.readTemperature(true);
 
-//  if (isnan(t) | isnan(f))
-//  {
-//    scrollText(1, "DHT tidak terdeteksi.", 250, 16);
-//    mati();
-//    return;
-//  }
+  if (isnan(t) | isnan(f))
+  {
+    scrollText(1, "DHT tidak terdeteksi.", 250, 16);
+    mati();
+    return;
+  }
 
   lcd.home();
   lcd.print(t);

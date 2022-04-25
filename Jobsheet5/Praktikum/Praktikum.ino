@@ -3,12 +3,10 @@
 #define pinDHT 7 // SD3 pin signal sensor DHT
 byte temperature = 0;
 byte humidity = 0;
-SimpleDHT11 dht11(D7); //instan sensor dht11
+SimpleDHT11 dht11(D0); //instan sensor dht11
 void KelembabanSuhu()
 {
 int err = SimpleDHTErrSuccess;
-05. DHT11
-40
 if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess)
 {
 Serial.print("Pembacaan DHT11 gagal, err=");
